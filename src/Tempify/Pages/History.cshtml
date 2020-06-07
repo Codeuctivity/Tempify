@@ -1,0 +1,25 @@
+﻿@page
+@model Codeuctivity.Pages.HistoryModel
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MesureValue[0].Temperature)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+      @foreach (var item in Model.MesureValue) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MesuareDateTime)
+            </td>
+            <td>
+              @Html.DisplayFor(modelItem => item.Temperature)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
